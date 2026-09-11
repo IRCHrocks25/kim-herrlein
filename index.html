@@ -1779,22 +1779,25 @@ a:focus-visible, button:focus-visible{outline:2px solid var(--navy);outline-offs
 }
 
 /* =====================================================================
-   Mobile — keep button labels on one line
+   Mobile — fit button labels without losing side padding
    ===================================================================== */
 @media (max-width:640px){
   .btn,
   .btn-outline,
   .btn-tan-outline{
+    box-sizing:border-box;
     font-size:clamp(.72rem, 3.6vw, .95rem);
-    padding-left:1.1rem;
-    padding-right:1.1rem;
+    padding-left:1.25rem;
+    padding-right:1.25rem;
     gap:.4rem;
     letter-spacing:.05em;
-    white-space:nowrap;
+    white-space:normal;
+    overflow-wrap:break-word;
+    text-wrap:balance;
   }
   .btn .arrow,
   .btn-outline .arrow,
-  .btn-tan-outline .arrow{width:1em;height:1em}
+  .btn-tan-outline .arrow{width:1em;height:1em;flex-shrink:0}
 }
 </style>
 </head>
