@@ -1777,6 +1777,25 @@ a:focus-visible, button:focus-visible{outline:2px solid var(--navy);outline-offs
   *,*::before,*::after{transition:none!important;scroll-behavior:auto!important;animation:none!important}
   .reveal,.reveal-x{opacity:1!important;transform:none!important}
 }
+
+/* =====================================================================
+   Mobile — keep button labels on one line
+   ===================================================================== */
+@media (max-width:640px){
+  .btn,
+  .btn-outline,
+  .btn-tan-outline{
+    font-size:clamp(.72rem, 3.6vw, .95rem);
+    padding-left:1.1rem;
+    padding-right:1.1rem;
+    gap:.4rem;
+    letter-spacing:.05em;
+    white-space:nowrap;
+  }
+  .btn .arrow,
+  .btn-outline .arrow,
+  .btn-tan-outline .arrow{width:1em;height:1em}
+}
 </style>
 </head>
 <body>
